@@ -15,9 +15,9 @@ Part 3: Run psmc to get `.psmc` output - `psmc_psmc_prepare.sh`
 
 A typical run will look something like:  
 
-Get a list of `.bam` files:  
+Get a list of `.bam` files (i.e. one per line - example provided):  
 ```
-ls *.bam > bam.list  
+ls *.bam > bam.test.list  
 ```
 
 1. Prepare `.fq` files by specifying the `genome`, `list of bam files`, `current dir`, and `outpur dir`:  
