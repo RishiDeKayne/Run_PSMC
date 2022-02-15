@@ -20,7 +20,7 @@ Get a list of `.bam` files:
 ls *.bam > bam.list  
 ```
 
-1. Prepare `.fq` files by specifying the `genome` `list of bam files` `current dir` and `outpur dir`:  
+1. Prepare `.fq` files by specifying the `genome`, `list of bam files`, `current dir`, and `outpur dir`:  
 ```
 ./psmc_all_prepare.sh /scratch/rdekayne/psmc_full/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full  
 
