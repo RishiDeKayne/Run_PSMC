@@ -21,7 +21,8 @@ ls *.bam > bam.list
 ```
 
 1. Prepare `.fq` files by specifying the `genome` `list of bam files` `current dir` and `outpur dir`:  
-```./psmc_all_prepare.sh /scratch/rdekayne/psmc_full/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full  
+```
+./psmc_all_prepare.sh /scratch/rdekayne/psmc_full/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full  
 
 parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp64 1 -l h=bigbang -b yes {}' :::: Get.all.fq.txt  
 ```  
