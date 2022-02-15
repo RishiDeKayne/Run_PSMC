@@ -13,6 +13,8 @@ Part 1: Get consensus `.fq` files - `psmc_fq_prepare.sh`
 Part 2: Get `.psmcfa` files - `psmc_psmcfa_prepare.sh`  
 Part 3: Run psmc to get `.psmc` output - `psmc_psmc_prepare.sh`  
 
+____
+
 A typical run will look something like:  
 
 Get a list of `.bam` files (i.e. one per line - example provided):  
