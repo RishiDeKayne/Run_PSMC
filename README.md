@@ -94,3 +94,18 @@ ls /data/martin/genomics/analyses/Danaus_mapping/SM16S*.Dchry2.2.*.bam > bam.lis
 ```
 head -n1 bam.list > bam.test.list
 ```  
+
+#kill a job  
+```
+qdel JOB_NUMBER
+```  
+
+#kill a range of jobs  
+```
+qdel {FIRSTJOB_NUMBER..LASTJOB_NUMBER}
+```  
+
+#check status of node  
+```
+htop
+```  
