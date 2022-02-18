@@ -58,7 +58,7 @@ exit
 1. Prepare `.fq` files by specifying the `genome`, `list of bam files`, `current dir`, and `outpur dir`:  
 ```
 #this command will run the .sh script and will produce a .txt file that includes commands to make the .fq files
-./psmc_all_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC /scratch/$USER/psmc 
+./psmc_fq_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC /scratch/$USER/psmc 
 
 #take a look in the Get.all.fq.txt to see what these commands look like:
 head Get.all.fq.txt
