@@ -58,7 +58,7 @@ exit
 1. Prepare `.fq` files by specifying the `genome`, `list of bam files`, `current dir`, and `outpur dir`:  
 ```
 #this command will run the .sh script and will produce a .txt file that includes commands to make the .fq files
-./psmc_all_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full  
+./psmc_all_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/$USER/psmc 
 
 #take a look in the Get.all.fq.txt to see what these commands look like:
 head Get.all.fq.txt
@@ -69,14 +69,14 @@ parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp64 1 -l h=c2 -b yes {}' :::: Get
 
 2. Next prepare `.psmcfa` files from these `.fq` files:  
 ```
-./psmc_psmcfa_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full
+./psmc_psmcfa_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/$USER/psmc 
 
 parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp64 1 -l h=c2 -b yes {}' :::: Get.all.psmcfa.txt  
 ```  
 
 3. Run psmc and get `.psmc` files which can be plotted:  
 ```
-./psmc_psmc_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/rdekayne/psmc_full
+./psmc_psmc_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/psmc /scratch/$USER/psmc 
 
 parallel -j 1 'qsub -cwd -N psmc_run -V -pe smp64 1 -l h=c2 -b yes {}' :::: Get.all.psmc.txt
 ```
