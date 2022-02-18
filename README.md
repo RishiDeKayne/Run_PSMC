@@ -22,6 +22,27 @@ Get a list of `.bam` files (i.e. one per line - example provided):
 ls *.bam > bam.test.list  
 ```
 
+#load conda environment  
+```sconda /ceph/users/rdekayne/.conda/envs/genomics_general/```
+
+#check queue
+```qstat -f -u "*"```  
+
+#first move onto a node with no jobs e.g. c2
+```ssh c2```  
+
+#make a folder here for psmc
+```mkdir -p /scratch/$USER/psmc && cd /scratch/$USER/psmc```  
+
+#copy genome here
+```cp /data/martin/genomics/analyses/Danaus_genome/Dchry2/Dchry2.2.fa .
+cp /data/martin/genomics/analyses/Danaus_genome/Dchry2/Dchry2.2.fa.fai .```  
+
+#now exit the cluster  
+```exit```  
+
+#to deactivate conda env for any reason use `dconda`
+
 1. Prepare `.fq` files by specifying the `genome`, `list of bam files`, `current dir`, and `outpur dir`:  
 ```
 #this command will run the .sh script and will produce a .txt file that includes commands to make the .fq files
