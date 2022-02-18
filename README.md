@@ -48,7 +48,7 @@ cp /data/martin/genomics/analyses/Danaus_genome/Dchry2/Dchry2.2.fa .
 cp /data/martin/genomics/analyses/Danaus_genome/Dchry2/Dchry2.2.fa.fai .
 ```  
 
-#now exit the cluster  
+#now exit the node  
 ```
 exit
 ```  
