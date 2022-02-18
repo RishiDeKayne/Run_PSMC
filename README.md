@@ -112,5 +112,5 @@ htop
 
 #delete intermediate output  
 ```
-rm -rf psmc_prep.*
+rm -f psmc_prep.*
 ``` 
