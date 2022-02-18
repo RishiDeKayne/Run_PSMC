@@ -81,6 +81,8 @@ parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.a
 parallel -j 1 'qsub -cwd -N psmc_run -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.all.psmc.txt
 ```
 
+___
+
 #your working directory is `/data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC`  
 
 #to get a list of all south african samples e.g. SM16S*** you can run  
