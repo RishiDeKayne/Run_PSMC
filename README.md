@@ -82,7 +82,13 @@ parallel -j 1 'qsub -cwd -N psmc_run -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.al
 ```
 
 #your working directory is `/data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC`  
+
 #to get a list of all south african samples e.g. SM16S*** you can run  
 ```
 ls /data/martin/genomics/analyses/Danaus_mapping/SM16S*.Dchry2.2.*.bam > bam.list
+```  
+
+#to get a list to test with e.g. one bam file you can do:  
+```
+head -n1 bam.list > bam.test.list
 ```  
