@@ -109,3 +109,8 @@ qdel {FIRSTJOB_NUMBER..LASTJOB_NUMBER}
 ```
 htop
 ```  
+
+#delete intermediate output  
+```
+rm -rf psmc_prep.*
+``` 
