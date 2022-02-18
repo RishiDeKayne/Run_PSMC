@@ -111,6 +111,7 @@ htop
 ```  
 
 #delete intermediate output  
+#MAKE SURE THERE IS NO SPACE between the `.` and the `*`
 ```
 rm -f psmc_prep.*
 ``` 
