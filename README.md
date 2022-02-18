@@ -32,7 +32,7 @@ sconda /ceph/users/rdekayne/.conda/envs/genomics_general/
 qstat -f -u "*"
 ```  
 
-#first move onto a node with no jobs e.g. c2
+#first move onto a node with no jobs e.g. c3
 ```
 ssh c2
 ```  
@@ -64,21 +64,21 @@ exit
 head Get.all.fq.txt
 
 #this command will then use parallel to submit this list of commands, running one job for each of the bam files in the list in parallel - producing .fq files for each
-parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.all.fq.txt  
+parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp 1 -l h=c3 -b yes {}' :::: Get.all.fq.txt  
 ```  
 
 2. Next prepare `.psmcfa` files from these `.fq` files:  
 ```
 ./psmc_psmcfa_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC /scratch/$USER/psmc 
 
-parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.all.psmcfa.txt  
+parallel -j 1 'qsub -cwd -N psmc_prep -V -pe smp 1 -l h=c3 -b yes {}' :::: Get.all.psmcfa.txt  
 ```  
 
 3. Run psmc and get `.psmc` files which can be plotted:  
 ```
 ./psmc_psmc_prepare.sh /scratch/$USER/psmc/Dchry2.2.fa bam.test.list /data/martin/genomics/analyses/Danaus_popgen/StHelena_project/JoshPSMC /scratch/$USER/psmc 
 
-parallel -j 1 'qsub -cwd -N psmc_run -V -pe smp 1 -l h=c2 -b yes {}' :::: Get.all.psmc.txt
+parallel -j 1 'qsub -cwd -N psmc_run -V -pe smp 1 -l h=c3 -b yes {}' :::: Get.all.psmc.txt
 ```
 
 ___
