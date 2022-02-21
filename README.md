@@ -115,3 +115,8 @@ htop
 ```
 rm -f psmc_prep.*
 ``` 
+
+#copy to your machine
+```  
+scp qmaster:/file/path/to/folder/*.psmc My/local/folder/
+```  
